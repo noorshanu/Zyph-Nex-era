@@ -18,16 +18,34 @@ import Blank from "./pages/Blank";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
+import UserManagement from "./pages/UserManagement";
+import MatchManagement from "./pages/MatchManagement";
+import MatchHistoryAdmin from "./pages/MatchHistoryAdmin";
+import CoinManagement from "./pages/CoinManagement";
 
 export default function App() {
   return (
-    <>
+    <AuthProvider>
       <Router>
         <ScrollToTop />
         <Routes>
-          {/* Dashboard Layout */}
-          <Route element={<AppLayout />}>
+          {/* Dashboard Layout - Protected Routes */}
+          <Route
+            element={
+              <ProtectedRoute>
+                <AppLayout />
+              </ProtectedRoute>
+            }
+          >
             <Route index path="/" element={<Home />} />
+
+            {/* Admin Management */}
+            <Route path="/users" element={<UserManagement />} />
+            <Route path="/matches" element={<MatchManagement />} />
+            <Route path="/match-history" element={<MatchHistoryAdmin />} />
+            <Route path="/coins" element={<CoinManagement />} />
 
             {/* Others Page */}
             <Route path="/profile" element={<UserProfiles />} />
@@ -61,6 +79,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
-    </>
+    </AuthProvider>
   );
 }
+

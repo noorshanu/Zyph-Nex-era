@@ -1,0 +1,302 @@
+2 Mandatory First-Time Disclosure
+
+User must:
+	•	Accept terms
+	•	Acknowledge:
+	•	Skill-based competition
+	•	No guaranteed rewards
+	•	Market risk awareness
+
+Hard gate → cannot proceed without acceptance.
+
+⸻
+
+1.3 Guided Micro-Tutorial (60–90 seconds)
+
+Step-by-step overlay:
+	1.	“Choose assets”
+	2.	“Allocate capital”
+	3.	“Performance decides rank”
+	4.	“Top performers earn rewards”
+
+User action:
+	•	Tap Try Practice Match
+
+⸻
+
+PHASE 2 — PRACTICE MATCH (NON-MONETARY)
+
+Purpose: Teach mechanics without financial pressure
+
+2.1 Practice Lobby
+	•	Single room
+	•	10 AI or shadow users
+	•	No entry pass
+	•	No rewards
+
+User must complete one full match before real matches unlock.
+
+⸻
+
+PHASE 3 — MAIN LOBBY (POST-ONBOARDING)
+
+3.1 Game Lobby (Home Screen)
+
+User sees:
+	•	Active matches
+	•	Upcoming matches
+	•	Match filters:
+	•	Duration
+	•	Player count
+	•	Entry pass amount
+
+Each match card shows:
+	•	Player count (e.g., 37/50)
+	•	Duration (30 min)
+	•	Entry pass
+	•	Reward pool
+	•	Start timer
+
+CTA:
+	•	Join Match
+
+⸻
+
+3.2 Wallet / Balance Check
+
+If insufficient balance:
+	•	Prompt to add funds
+	•	Or redirect to free modes
+
+No forced upsell.
+
+⸻
+
+PHASE 4 — MATCH ENTRY & LOCK-IN
+
+4.1 Match Entry Confirmation
+
+User sees:
+	•	Match summary
+	•	Entry pass amount
+	•	Max possible reward range (not guaranteed)
+
+CTA:
+	•	Confirm Entry
+
+Backend:
+	•	Deduct entry pass
+	•	Assign match_id
+	•	Lock seat
+
+⸻
+
+PHASE 5 — ASSET (CARD) SELECTION
+
+5.1 Asset Pool Screen
+
+User sees 12–13 crypto cards:
+Each card shows:
+	•	Asset name + symbol
+	•	Current price
+	•	24h % change
+	•	Volatility tag (Low / Med / High)
+	•	Volume indicator
+
+Rules displayed:
+	•	Pick exactly 5
+	•	Cannot change later
+
+UX:
+	•	Selected cards highlighted
+	•	Remaining picks counter (e.g., 3/5)
+
+CTA:
+	•	Proceed to Allocation
+
+⸻
+
+PHASE 6 — CAPITAL ALLOCATION
+
+6.1 Allocation Screen
+
+User sees:
+	•	Total balance: 1,000 units
+	•	Selected 5 assets
+	•	Slider or +/– buttons per asset (100 unit increments)
+
+Constraints enforced:
+	•	Min: 100 per asset
+	•	Max: 500 per asset
+	•	Total must equal 1,000
+
+Visuals:
+	•	Pie chart
+	•	Risk distribution bar
+
+CTA:
+	•	Confirm Portfolio
+
+⸻
+
+6.2 Final Lock Screen
+
+User must:
+	•	Review allocation
+	•	Acknowledge:
+	•	Portfolio is locked
+	•	No changes after start
+
+CTA:
+	•	Lock & Enter Match
+
+Backend:
+	•	Timestamp allocation
+	•	Freeze portfolio
+	•	Move user to waiting room
+
+⸻
+
+PHASE 7 — PRE-MATCH WAITING ROOM
+
+7.1 Countdown Screen
+
+User sees:
+	•	Countdown timer
+	•	Total players joined
+	•	Their locked portfolio (read-only)
+
+No exits unless match canceled.
+
+⸻
+
+PHASE 8 — LIVE MATCH STATE
+
+8.1 Match Start
+
+System:
+	•	Records opening price snapshot for all assets
+	•	Starts PnL calculations
+
+⸻
+
+8.2 Live Match Dashboard
+
+User sees:
+
+A. Portfolio Overview
+	•	Total PnL %
+	•	Rank (e.g., #12 / 50)
+	•	Rank movement arrows
+
+B. Asset Performance
+Per asset:
+	•	Price change %
+	•	Contribution to portfolio
+	•	Color-coded (green/red)
+
+C. Leaderboard
+	•	Top 10 visible
+	•	User highlighted
+	•	Real-time updates (interval-based)
+
+No user actions allowed (MVP).
+
+⸻
+
+8.3 Visual Engagement Elements
+	•	PnL progress bar
+	•	Zone indicators:
+	•	Top 10% (green)
+	•	Mid pack (neutral)
+	•	Bottom 20% (red)
+
+⸻
+
+PHASE 9 — MATCH END & SETTLEMENT
+
+9.1 Match End Trigger
+
+At timer = 0:
+	•	Final price snapshot
+	•	Final PnL calculated
+	•	Leaderboard frozen
+
+⸻
+
+9.2 Results Screen
+
+User sees:
+	•	Final rank
+	•	Total PnL %
+	•	Reward earned (if any)
+
+Expandable:
+	•	Asset-wise breakdown
+	•	Allocation efficiency
+
+CTA:
+	•	View Full Leaderboard
+	•	Join Next Match
+
+⸻
+
+9.3 Reward Distribution
+
+Backend:
+	•	Platform fee deducted
+	•	Reward pool distributed
+	•	Rewards credited to wallet
+
+Transparent log:
+	•	Entry pool
+	•	Platform fee
+	•	Distribution logic
+
+⸻
+
+PHASE 10 — POST-MATCH FEEDBACK LOOP
+
+10.1 Performance Summary
+
+User sees:
+	•	“You outperformed 72% of players”
+	•	Skill rating change (+/–)
+•⁠  ⁠Best performing asset
+	•	Weakest pick
+
+⸻
+
+10.2 Social / Competitive Hooks
+
+Optional:
+	•	Share result
+	•	Compare with friends
+	•	Rematch suggestion
+
+⸻
+
+PHASE 11 — RETENTION & PROGRESSION
+
+11.1 Skill Progression
+
+User profile shows:
+	•	Skill rating
+	•	Win %
+	•	Average rank
+	•	Match history
+
+⸻
+
+11.2 Re-Engagement Triggers
+	•	“You’re 1 match away from Top 10%”
+	•	“New 30-min match starting in 5 min”
+	•	Daily free practice challenge
+
+No aggressive push notifications.
+
+⸻
+
+FLOW SUMMARY (ONE-LINE)
+
+Onboard → Learn → Join Match → Select Assets → Allocate Capital → Compete on Market Skill → Rank → Earn → Improve → Repeat

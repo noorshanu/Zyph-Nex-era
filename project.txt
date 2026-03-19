@@ -1,0 +1,324 @@
+1️⃣ Product Ideation & Game Design
+
+Core Game Loop (Clean & Defensible)
+
+Concept
+	•	Each match is a time-boxed speculative trading simulation
+	•	Users compete on portfolio performance, not luck outcomes
+
+Assets
+	•	12–13 trending crypto assets (spot only in MVP)
+	•	Assets are fixed before the match starts
+	•	No mid-match asset additions (prevents manipulation)
+
+⸻
+
+Match Formats (MVP-friendly)
+
+A. Classic Royale (Primary Mode)
+	•	Players per room: 20 / 50 / 100
+	•	Asset pool: 12–13 crypto cards
+	•	Selection: Pick exactly 5
+	•	Starting balance: 1,000 virtual units
+	•	Allocation: Min 100 units per card, max 500 per card
+	•	Reallocation: ❌ Disabled (MVP)
+	•	Market data: Real-time spot prices (read-only oracle)
+
+Duration options
+	•	15 min (fast)
+	•	30 min (standard)
+	•	60 min (advanced)
+
+⸻
+
+B. Sprint Mode (Later MVP add-on)
+	•	10–20 players
+	•	5–10 min duration
+	•	Faster re-engagement, mobile-first
+
+C. Head to head (1v1)
+D. Custom rooms 
+
+⸻
+
+Rules (Strict & Simple)
+	•	Portfolio is locked at match start
+	•	PnL = weighted % change across selected assets
+	•	No leverage, no shorts (MVP)
+	•	All players face identical market conditions
+	•	No user can affect price action
+
+⸻
+
+Win Conditions
+	•	Primary: Highest portfolio PnL %
+	•	Tie-breaker 1: Lowest volatility (risk-adjusted return)
+	•	Tie-breaker 2: Earliest allocation confirmation
+	•	Tie-breaker 3: Split reward
+
+⸻
+
+2️⃣ Speculation vs Gambling (CRITICAL)
+
+This is where most projects fail. Here’s how you stay on the right side.
+
+⸻
+
+What Makes This Skill-Based
+	•	Users select assets (market analysis skill)
+	•	Users allocate capital (portfolio construction)
+	•	Outcomes depend on real market movement, not RNG
+	•	No random draws, no odds, no house-decided outcomes
+	•	No “double or nothing”, no luck multipliers
+
+This mirrors:
+	•	Trading competitions
+	•	Fantasy stock leagues
+	•	Portfolio benchmarking challenges
+
+⸻
+
+What This Is NOT
+
+❌ No dice
+❌ No spins
+❌ No jackpots
+❌ No house bets against users
+❌ No hidden probabilities
+
+⸻
+
+Language to Avoid (Important)
+
+Never use:
+	•	Gambling
+	•	Betting
+	•	Wager
+	•	Jackpot
+	•	Casino
+	•	Odds
+	•	Luck
+	•	Lottery
+	•	Risk-free
+	•	Win big
+
+⸻
+
+Compliance-Friendly Language
+
+Use instead:
+	•	Skill-based competition
+	•	Trading challenge
+	•	Performance ranking
+	•	Entry pass (not bet)
+	•	Reward pool
+	•	Simulated portfolio
+	•	Market performance
+
+⸻
+
+Rewards Positioning
+	•	Rewards are for top performers
+	•	Based on relative skill
+	•	Platform does not guarantee returns
+	•	Clear disclaimer: “Past performance does not indicate future results”
+
+⸻
+
+3️⃣ User Flow (End-to-End)
+
+1.⁠ ⁠Onboarding
+	•	 wallet login
+	•	Basic risk disclosure
+	•	Tutorial (1-minute interactive)
+	•	Practice match (free)
+
+⸻
+
+2.⁠ ⁠Game Lobby
+	•	Choose match type
+	•	See:
+	•	Duration
+	•	Player count
+	•	Entry pass
+	•	Reward pool
+	•	Countdown to start
+
+⸻
+
+3.⁠ ⁠Card (Asset) Selection
+	•	12–13 crypto cards shown
+	•	Each card displays:
+	•	Price change (24h)
+	•	Volume
+	•	Volatility indicator
+	•	Pick 5 (hard rule)
+
+⸻
+
+4.⁠ ⁠Capital Allocation
+	•	Start with 1,000 units
+	•	Allocate in 100-unit blocks
+	•	Visual pie chart
+	•	Confirm allocation → lock
+
+⸻
+
+5.⁠ ⁠Match Live State
+	•	Live leaderboard
+	•	Portfolio PnL bar
+	•	Rank changes highlighted
+	•	Asset performance indicators
+	•	No mid-game actions (MVP)
+
+⸻
+
+6.⁠ ⁠Leaderboard Mechanics
+	•	Rank by PnL %
+	•	Color-coded tiers:
+	•	Top 10%
+	•	Mid-pack
+	•	Bottom 20%
+	•	Live rank movement animations
+
+⸻
+
+7.⁠ ⁠Match End & Rewards
+	•	Final rankings
+	•	Breakdown:
+	•	Asset-wise PnL
+	•	Allocation impact
+	•	Rewards credited
+	•	Share result (optional)
+
+⸻
+
+8.⁠ ⁠Re-Engagement Loop
+	•	“You beat 73% of players”
+	•	Skill rating updated
+	•	Suggested next match
+	•	Daily challenges (non-monetary)
+
+⸻
+
+4️⃣ Game Mechanics & Engagement
+
+Leaderboards
+	•	Match leaderboard
+	•	Daily / weekly global rankings
+	•	Skill rating (ELO-style, non-tokenized)
+
+⸻
+
+Visual Feedback
+	•	PnL heat bars per asset
+	•	Rank delta arrows
+	•	Danger zone (bottom 20%)
+	•	Victory highlight for top 3
+
+⸻
+
+Anti-Cheat & Fairness
+	•	Oracle-based pricing (multiple sources)
+	•	Snapshot pricing at fixed intervals
+	•	No mid-match joins
+•⁠  ⁠No asset switching
+	•	Allocation timestamp recorded
+
+⸻
+
+Tie-Breaker Logic
+	1.	Risk-adjusted return
+	2.	Allocation confirmation time
+	3.	Reward split
+
+⸻
+
+Why Users Return
+	•	Skill improvement loop
+	•	Social comparison
+	•	Short match durations
+	•	Visible progression
+	•	Competitive satisfaction (not luck dopamine)
+
+⸻
+
+5️⃣ Naming & Branding
+
+Competitive
+	•	Market Royale
+	•	Alpha Arena
+	•	TradeOff
+	•	Ranked Markets
+	•	Asset Clash
+
+Futuristic
+	•	SignalX
+	•	Quantum
+	•	Vektor
+	•	GridAlpha
+	•	FluxRank
+
+Tactical / Strategy-Driven
+	•	Portfolio Ops
+	•	Capital Command
+	•	Tradecraft
+	•	Signal Room
+	•	Market Tactics
+
+⸻
+
+Top 5 Strongest Picks
+
+1.⁠ ⁠Alpha Arena
+	•	Instantly signals competition + skill
+	•	Crypto-native but mainstream-safe
+
+2.⁠ ⁠Market Royale
+	•	Familiar game mechanic
+	•	Clearly market-based, not casino-based
+
+3.⁠ ⁠Tradecraft
+	•	Strong skill implication
+	•	Serious, professional tone
+
+4.⁠ ⁠SignalX
+	•	Appeals to traders
+	•	Modern and scalable
+
+5.⁠ ⁠Capital Command
+	•	Strategic, portfolio-focused
+	•	Works well for tournaments later
+
+⸻
+
+6️⃣ Monetization (Realistic)
+
+Entry Mechanics
+	•	Users pay an entry pass
+	•	Entry pool → reward pool
+
+⸻
+
+Platform Fee
+	•	5–10% from total pool
+	•	Fixed, transparent
+	•	Not outcome-dependent
+
+⸻
+
+Reward Distribution (Example)
+	•	Top 10% get rewards
+	•	Weighted:
+	•	1st: 30%
+	•	2nd: 20%
+	•	3rd: 15%
+	•	Rest: distributed
+
+⸻
+
+Optional Premium (Later)
+	•	Advanced analytics
+	•	Private rooms
+	•	Longer tournaments
+	•	Skill history dashboards
