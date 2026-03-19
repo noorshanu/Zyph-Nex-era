@@ -36,7 +36,7 @@ export default function MatchHistoryAdmin() {
         return () => { cancelled = true; };
     }, [page]);
 
-    const fmt = (d: string) => d ? new Date(d).toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric", hour: "2-digit", minute: "2-digit" }) : "—";
+    const fmt = (d: string) => d ? new Date(d).toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" }) : "—";
     const duration = (start: string, end: string) => {
         if (!start || !end) return "—";
         const diff = Math.round((new Date(end).getTime() - new Date(start).getTime()) / 60000);

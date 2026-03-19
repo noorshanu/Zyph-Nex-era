@@ -75,7 +75,12 @@ export default function MatchManagement() {
         setSubmitting(true);
         setError("");
         try {
-            const data = await MatchService.create(newMatch);
+            const payload = { ...newMatch };
+            // Ensure IST parsing if no timezone is provided
+            if (payload.start_time && !payload.start_time.includes('+') && !payload.start_time.endsWith('Z')) {
+                payload.start_time = `${payload.start_time}+05:30`;
+            }
+            const data = await MatchService.create(payload);
             if (data.success) {
                 setShowCreateModal(false);
                 setNewMatch({ title: "", type: "paid", entry_fee: 5, prize_pool: 100, virtual_balance: 1000, join_window_minutes: 30, match_duration_minutes: 4, max_participants: 50, start_time: "" });
@@ -160,7 +165,7 @@ export default function MatchManagement() {
     };
 
     const formatDateTime = (dateString: string) => {
-        return new Date(dateString).toLocaleString("en-US", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+        return new Date(dateString).toLocaleString("en-US", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" });
     };
 
     const shortAddress = (addr?: string) => {

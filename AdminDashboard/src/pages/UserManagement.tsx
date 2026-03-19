@@ -189,7 +189,7 @@ export default function UserManagement() {
                                                             ? `${user.firstName || ""} ${user.lastName || ""}`
                                                             : user.username || "Unnamed User"}
                                                     </p>
-                                                    <p className="text-xs text-gray-500">Joined {new Date(user.createdAt).toLocaleDateString()}</p>
+                                                    <p className="text-xs text-gray-500">Joined {new Date(user.createdAt).toLocaleDateString("en-US", { timeZone: "Asia/Kolkata" })}</p>
                                                 </div>
                                             </div>
                                         </td>

@@ -11,12 +11,14 @@ const Lobby = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchMatches();
+    fetchMatches(true);
+    const interval = setInterval(() => fetchMatches(false), 5000);
+    return () => clearInterval(interval);
   }, []);
 
-  const fetchMatches = async () => {
+  const fetchMatches = async (showLoading = true) => {
     try {
-      setLoading(true);
+      if (showLoading) setLoading(true);
       const response = await matchesApi.getAll();
       setMatches(response.data || []);
     } catch (err) {
